@@ -6,8 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <web-photo-filter [src]="image" filter="sepia"></web-photo-filter>
+<ion-content>
+  <ion-button expand="full" (click)="selectImage()">Select Image</ion-button>
   <ion-slides [options]="slideOpts" *ngIf="image">
     <ion-slide
       *ngFor="let opts of filterOptions; let i = index;"
@@ -21,7 +21,8 @@
           [src]="image"
           keep="false"
           [filter]="opts.value"
-        ></web-photo-filter>
+        >
+        </web-photo-filter>
       </div>
     </ion-slide>
   </ion-slides>

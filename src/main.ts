@@ -14,5 +14,5 @@ platformBrowserDynamic()
 
 import { defineCustomElements } from "@ionic/pwa-elements/loader";
 
-// After the platform has been bootstrapped
+// Call the element loader after the platform has been bootstrapped
 defineCustomElements(window);

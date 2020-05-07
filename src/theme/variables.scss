@@ -3,6 +3,25 @@
 
 /** Ionic CSS Variables **/
 :root {
+  #preview {
+    web-photo-filter {
+      canvas, img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  web-photo-filter.no-original {
+    img {
+      display: none;
+    }
+  }
+  web-photo-filter.only-original {
+    canvas {
+      display: none;
+    }
+  }
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
