@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ionic Photo Filter
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <web-photo-filter [src]="image" filter="sepia"></web-photo-filter>
+  <ion-slides [options]="slideOpts" *ngIf="image">
+    <ion-slide
+      *ngFor="let opts of filterOptions; let i = index;"
+      tappable
+      (click)="filter(i)"
+    >
+      <ion-text [class.selected]="i == selectedIndex">{{opts.name}}</ion-text>
+      <div id="preview">
+        <web-photo-filter
+          [class.no-original]="i > 0"
+          [src]="image"
+          keep="false"
+          [filter]="opts.value"
+        ></web-photo-filter>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

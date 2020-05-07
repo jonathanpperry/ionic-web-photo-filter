@@ -1,0 +1,7 @@
+{
+  "name": "imageFilter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
