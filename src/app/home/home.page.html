@@ -1,13 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Ionic Photo Filter
+      Jonnyramen Photo Filter
     </ion-title>
+    <ion-buttons slot="end" *ngIf="image">
+      <ion-button (click)="saveImage()">Save</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-button expand="full" (click)="selectImage()">Select Image</ion-button>
+
+  <div id="preview" *ngIf="image">
+    <web-photo-filter
+      [class.no-original]="selectedFilter != ''"
+      [class.only-original]="selectedFilter == ''"
+      [src]="image"
+      keep="true"
+      [filter]="selectedFilter"
+      (filterLoad)="imageLoaded($event)"
+    ></web-photo-filter>
+  </div>
+
   <ion-slides [options]="slideOpts" *ngIf="image">
     <ion-slide
       *ngFor="let opts of filterOptions; let i = index;"
