@@ -1,0 +1,8 @@
+{
+  "appId": "io.jonnyramen.jpnchstsocialmedia",
+  "appName": "japan-christian-socialmedia",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

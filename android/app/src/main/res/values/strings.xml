@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">japan-christian-socialmedia</string>
+    <string name="title_activity_main">japan-christian-socialmedia</string>
+    <string name="package_name">io.jonnyramen.jpnchstsocialmedia</string>
+    <string name="custom_url_scheme">io.jonnyramen.jpnchstsocialmedia</string>
+</resources>
