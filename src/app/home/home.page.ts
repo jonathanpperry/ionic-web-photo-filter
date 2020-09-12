@@ -9,6 +9,8 @@ import { Plugins, CameraResultType, CameraSource } from "@capacitor/core";
 export class HomePage {
   image = "";
   selectedFilter = "";
+  selectedIndex = 0;
+
   result: HTMLElement;
   filterOptions = [
     { name: "Normal", value: "" },
@@ -29,12 +31,12 @@ export class HomePage {
   constructor() {}
 
   imageLoaded(e) {
-    console.log("loaded: ", e);
     this.result = e.detail.result;
   }
 
   filter(index) {
     this.selectedFilter = this.filterOptions[index].value;
+    this.selectedIndex = index;
   }
 
   async selectImage() {
@@ -49,8 +51,8 @@ export class HomePage {
 
   saveImage() {
     let base64 = "";
-    if (this.selectedFilter) {
-      // Use the original image
+    // Only use the original image if theres NO filter!
+    if (!this.selectedFilter) {
       base64 = this.image;
     } else {
       let canvas = this.result as HTMLCanvasElement;
