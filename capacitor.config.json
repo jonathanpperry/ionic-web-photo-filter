@@ -1,6 +1,6 @@
 {
-  "appId": "io.jonnyramen.jpnchstsocialmedia",
-  "appName": "japan-christian-socialmedia",
+  "appId": "io.jonnyramen.ionicwebfilter",
+  "appName": "Photo Filter App",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
